@@ -39,6 +39,10 @@ export const routes: Routes = [
         component: CartComponent,
       },
       {
+        path: 'clientLogin',
+        component: HomepageComponent,
+      },
+      {
         path: 'brands',
         component: BrandsListComponent,
       },
