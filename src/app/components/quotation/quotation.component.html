@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation Page</title>
+    
+</head>
+<body>
+    <div class="quotation-container">
+        <h1>Quotation</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Items</th>
+                    <th>Quote Total</th>
+                    <th>Quote Date</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="total">Grand Total:</td>
+                    <td id="grand-total">$0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="footer">
+            <button class="btn-print" onclick="window.print()">Print Quotation</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+    <!-- <script>
+        // Example cart data (Replace this with actual cart data from your application)
+        const cart = [
+            { name: 'Product A', quantity: 2, price: 50 },
+            { name: 'Product B', quantity: 1, price: 30 },
+            { name: 'Product C', quantity: 3, price: 20 }
+        ];
+
+        // Populate the table with cart data
+        const cartItemsContainer = document.getElementById('cart-items');
+        const grandTotalElement = document.getElementById('grand-total');
+        let grandTotal = 0;
+
+        cart.forEach(item => {
+            const total = item.quantity * item.price;
+            grandTotal += total;
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>${item.quantity}</td>
+                <td>$${item.price.toFixed(2)}</td>
+                <td>$${total.toFixed(2)}</td>
+            `;
+            cartItemsContainer.appendChild(row);
+        });
+
+        grandTotalElement.textContent = `$${grandTotal.toFixed(2)}`;
+    </script> -->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-admin-dashboard></app-admin-dashboard>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="card">
+              <div class="card-header">
+                <h2>Orders List</h2>
+              </div>
+            
+            <div class="card-body">
+              <table class="table table-striped" *ngIf="orders.length > 0">
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Order Date</th>
+                    <th>Quantity of items</th>
+                    <th>Items</th>
+                    <th>Order Total</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let order of orders">
+                    <td>{{ order.customer }}</td>
+                    <td>{{ order.order_Date}}</td>
+                    <td>{{ order.itemsQuantity }}</td>
+                    <td>{{ order.items }}</td>
+                    <td>{{ order.orderTotal }}</td>
+                    <td><a>Edit</a> | <a>Delete</a></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+          
+              <div *ngIf="orders.length === 0">
+                <p>No Orders found.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

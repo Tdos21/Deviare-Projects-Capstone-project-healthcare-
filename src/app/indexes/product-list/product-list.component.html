@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-admin-dashboard></app-admin-dashboard>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="card">
+              <div class="card-header">
+                <h2>Products List</h2>
+              </div>
+            
+            <div class="card-body">
+              <table class="table table-striped" *ngIf="products.length > 0">
+                <thead>
+                  <tr>
+                    <th>Product Name</th>
+                    <th>brand Name</th>
+                    <th>Category Name</th>
+                    <th>Unit Price</th>
+                    <th>Is Active?</th>
+                    <th>Recommended Age</th>
+                    <th>Product Description</th>
+                    <th>Actions</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of products">
+                    <td>{{ product.prodName }}</td>
+                    <td>{{ product.brandId}}</td>
+                    <td>{{ product.catId }}</td>
+                    <td>{{ product.unitPrice }}</td>
+                    <td>{{ product.isActive }}</td>
+                    <td>{{ product.recommendAge}}</td>
+                    <td>{{ product.prodDescription }}</td>
+                    <td><a>Edit</a> | <a>Delete</a></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+          
+              <div *ngIf="products.length === 0">
+                <p>No Products found.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

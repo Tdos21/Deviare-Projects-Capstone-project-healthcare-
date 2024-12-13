@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-category-filter></app-category-filter>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="dashboard">
+                <div class="">
+                  <a routerLink="/productDisplay" class="btn btn-primary">All Products</a>
+                  <p></p>
+                </div>
+              
+                <div class="">
+                  <a routerLink="/orderIndex" class="btn btn-primary">My Orders</a>                  
+                  <p></p>
+                </div>
+              
+                <div class="">
+                  <a routerLink="/invoiceIndex" class="btn btn-primary">My Invoices</a>                  
+                  <p></p>
+                </div>
+
+                <div class="">
+                  <a routerLink="/cart" class="btn btn-primary">Cart</a>                  
+                  <p></p>
+                </div>
+              </div>
+            <div class="card">
+                <app-topnav></app-topnav>
+                <br>
+                <app-product-display></app-product-display>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+    </body>
+</html>

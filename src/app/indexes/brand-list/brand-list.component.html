@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-admin-dashboard></app-admin-dashboard>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="card">
+              <div class="card-header">
+                <h2>Brands List</h2>
+              </div>
+            
+            <div class="card-body">
+              <table class="table table-striped" *ngIf="brands.length > 0">
+                <thead>
+                  <tr>
+                    <th>Brand Name</th>
+                    <th>Date Created</th>
+                    <th>Actions</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let brand of brands">
+                    <td>{{ brand.brandName }}</td>
+                    <td>{{ brand.dateCreated }}</td>
+                    <td><a>Edit</a> | <a>Delete</a></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+          
+              <div *ngIf="brands.length === 0">
+                <p>No Brands found.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          
+    </body>
+</html>

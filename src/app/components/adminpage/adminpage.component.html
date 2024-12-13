@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-admin-dashboard></app-admin-dashboard>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="card">
+              <h3>Welcome to Admin's Dashboard, </h3>
+              <div class="dashboard">
+                <div class="">
+                  <a routerLink="/orderIndex" class="btn btn-primary">View Orders</a>
+                  <p></p>
+                </div>
+              
+                <div class="">
+                  <a routerLink="/paymentIndex" class="btn btn-primary">View Payments</a>                  
+                  <p></p>
+                </div>
+              
+                <div class="">
+                  <a routerLink="/invoiceIndex" class="btn btn-primary">View Invoices</a>                  
+                  <p></p>
+                </div>
+
+                <div class="">
+                  <a routerLink="/customerIndex" class="btn btn-primary">View Clients</a>                  
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </body>
+</html>

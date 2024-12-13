@@ -1,0 +1,18 @@
+<div>
+    <h3>All Deliveries</h3>
+    
+    <div *ngIf="deliveries.length > 0; else noDeliveries">
+      <ul>
+        <li *ngFor="let delivery of deliveries">
+          <p>{{ delivery.delAddress }} - {{ delivery.delDate }}</p>
+          <p>Customer: {{ delivery.customer.name }}</p>
+          <p>Orders: {{ delivery.orders.orderId }}</p>
+        </li>
+      </ul>
+    </div>
+  
+    <ng-template #noDeliveries>
+      <p>No deliveries found.</p>
+    </ng-template>
+  </div>
+  

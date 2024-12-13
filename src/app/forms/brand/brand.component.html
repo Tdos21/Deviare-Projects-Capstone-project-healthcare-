@@ -1,0 +1,30 @@
+<div class="brand-add-form">
+    <h2>Add a New Brand</h2>
+  
+    <form (ngSubmit)="addBrand()">
+      <div>
+        <label for="brandName">Brand Name:</label>
+        <input
+          id="brandName"
+          type="text"
+          [(ngModel)]="brandName"
+          name="brandName"
+          required
+        />
+      </div>
+  
+      <div>
+        <label for="dateCreated">Date Created:</label>
+        <input
+          id="dateCreated"
+          type="date"
+          [(ngModel)]="dateCreated"
+          name="dateCreated"
+          required
+        />
+      </div>
+  
+      <button type="submit">Add Brand</button>
+    </form>
+  </div>
+  

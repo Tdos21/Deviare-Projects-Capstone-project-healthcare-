@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  .row {
+    margin: 0;
+  }
+  .sidenav {
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 15px;
+    position: fixed;
+  }
+  .content {
+    margin-left: 18%; /* Adjust for col-2 sidenav */
+    padding: 15px;
+  }

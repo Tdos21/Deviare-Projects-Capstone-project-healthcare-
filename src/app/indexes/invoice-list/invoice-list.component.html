@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-admin-dashboard></app-admin-dashboard>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="card">
+              <div class="card-header">
+                <h2>Invoices List</h2>
+              </div>
+            
+            <div class="card-body">
+              <table class="table table-striped" *ngIf="invoices.length > 0">
+                <thead>
+                  <tr>
+                    <th>Customer Full Name</th>
+                    <th>Invoice Date</th>
+                    <th>Items</th>
+                    <th>Items Quantity</th>
+                    <th>Orders</th>
+                    <th>Payment Status</th>
+                    <th>Invoice Total</th>
+                    <th>Actions</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let invoice of invoices">
+                    <td>{{ invoice.custId }}</td>
+                    <td>{{ invoice.inv_Date }}</td>
+                    <td>{{ invoice.inv_Items }}</td>
+                    <td>{{ invoice.cinv_itemsQuantity }}</td>
+                    <td>{{ invoice.orderId }}</td>
+                    <td>{{ invoice.payId }}</td>
+                    <td>{{ invoice.invTotal }}</td>
+                    <td><a>Edit</a> | <a>Delete</a></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+          
+              <div *ngIf="invoices.length === 0">
+                <p>No Invoices found.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>

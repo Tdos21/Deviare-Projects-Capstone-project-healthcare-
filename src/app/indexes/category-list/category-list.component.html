@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-admin-dashboard></app-admin-dashboard>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="card">
+              <div class="card-header">
+                <h2>Categories List</h2>
+              </div>
+            
+            <div class="card-body">
+              <table class="table table-striped" *ngIf="category.length > 0">
+                <thead>
+                  <tr>
+                    <th>Category Name</th>
+                    <th>Date Created</th>
+                    <th>Actions</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let category of category">
+                    <td>{{ category.catName }}</td>
+                    <td>{{ category.dateCraeted }}</td>
+                    <td><a>Edit</a> | <a>Delete</a></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+          
+              <div *ngIf="category.length === 0">
+                <p>No categories found.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>

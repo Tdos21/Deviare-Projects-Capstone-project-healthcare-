@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Side Navigation -->
+          <div class="col-2 sidenav">
+            <app-admin-dashboard></app-admin-dashboard>
+          </div>
+    
+          <!-- Main Content -->
+          <div class="col-9 offset-2 content">
+            <div class="card">
+              <div class="card-header">
+                <h2>Payments List</h2>
+              </div>
+            
+            <div class="card-body">
+              <table class="table table-striped" *ngIf="payment.length > 0">
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Pay Date</th>
+                    <th>Pay Status</th>
+                    <th>Orders</th>
+                    <th>Invoices</th>
+                    <th>Total Paid</th>
+                    <th>Actions</th>
+                   
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let payment of payment">
+                    <td>{{ payment.custId }}</td>
+                    <td>{{ payment.pay_Date}}</td>
+                    <td>{{ payment.payStatus }}</td>
+                    <td>{{ payment.invoices }}</td>
+                    <td>{{ payment.order_id}}</td>
+                    <td>{{ payment.totalPaySuccess}}</td>
+                    <td><a>Edit</a> | <a>Delete</a></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+          
+              <div *ngIf="payment.length === 0">
+                <p>No Payments found.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
